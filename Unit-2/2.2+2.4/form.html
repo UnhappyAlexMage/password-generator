@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Form to fill out</div>
+        <form class="form" action="">
+            <div class="input-field">
+                <input
+                    id="username"
+                    required=""
+                    type="text"
+                    name="text"
+                    placeholder="Alex"
+                />
+                <label for="username">Full Name</label>
+            </div>
+            <div class="input-field">
+                <input
+                    id="email"
+                    type="email"
+                    required=""
+                    name="email"
+                    placeholder="alex@email.com"
+                />
+                <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+                <input
+                    id="phone"
+                    type="tel"
+                    required=""
+                    name="phone"
+                    placeholder="+7(123)-456-78-90"
+                />
+                <label for="phone">Phone Number</label>
+            </div>
+
+            <div class="btn-container">
+                <button id="undoBtn" type="button" class="btn btn-undo">↩️ Отменить</button>
+                <button class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="validator.js"></script>
+</body>
+</html>
