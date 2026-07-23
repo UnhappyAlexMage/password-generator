@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Coverage
+coverage/
+
+# Environment
+.env
+.env.*
+
+# ESLint Cache
+.eslintcache

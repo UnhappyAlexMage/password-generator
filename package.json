@@ -1,0 +1,35 @@
+{
+    "name": "testing-jest",
+    "version": "1.0.0",
+    "description": "A simple a Generate Passwords program using JavaScript",
+    "scripts": {
+        "dev": "nodemon src/index.js",
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write .",
+        "check-format": "prettier --check ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/UnhappyAlexMage/testing-jest.git"
+    },
+    "keywords": [],
+    "author": "UnhappyAlexMage",
+    "license": "ISC",
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/UnhappyAlexMage/testing-jest/issues"
+    },
+    "homepage": "https://github.com/UnhappyAlexMage/testing-jest#readme",
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.7.0",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^17.7.0",
+        "jest": "^30.4.2",
+        "jest-environment-jsdom": "^30.4.1",
+        "nodemon": "^3.1.14",
+        "prettier": "^3.9.6"
+    }
+}
