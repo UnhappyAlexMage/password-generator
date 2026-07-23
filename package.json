@@ -12,16 +12,16 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/UnhappyAlexMage/testing-jest.git"
+        "url": "git+https://github.com/UnhappyAlexMage/password-generator.git"
     },
     "keywords": [],
     "author": "UnhappyAlexMage",
     "license": "ISC",
     "type": "module",
     "bugs": {
-        "url": "https://github.com/UnhappyAlexMage/testing-jest/issues"
+        "url": "https://github.com/UnhappyAlexMage/password-generator/issues"
     },
-    "homepage": "https://github.com/UnhappyAlexMage/testing-jest#readme",
+    "homepage": "https://github.com/UnhappyAlexMage/password-generator#readme",
     "devDependencies": {
         "@eslint/js": "^10.0.1",
         "eslint": "^10.7.0",
