@@ -1,4 +1,4 @@
-function generatePassword(length) {
+export function generatePassword(length) {
     // 1. Создаем массив, куда соберем коды ВСЕХ разрешенных символов
     const allowedCodes = [];
 
