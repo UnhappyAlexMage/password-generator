@@ -1,7 +1,8 @@
 import { BaseGenerator } from "../BaseGenerator.js";
+import { numbersLine } from "../constants/constants.js";
 
 export class GeneratorNumbers extends BaseGenerator {
-    constructor() {
-        super('0123456789');
+    constructor(length) {
+        super(numbersLine, length);
     }
 }
