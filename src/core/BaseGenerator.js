@@ -10,6 +10,6 @@ export class BaseGenerator {
             const randomIndex = Math.floor(Math.random() * this.lineSymbols.length);
             result += this.lineSymbols[randomIndex];
         }
-        return result
+        return result;
     }
 };
