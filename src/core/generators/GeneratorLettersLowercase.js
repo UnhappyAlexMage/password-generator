@@ -1,7 +1,8 @@
 import { BaseGenerator } from "../BaseGenerator.js";
+import { lowercaseLine } from "../constants/constants.js";
 
 export class GeneratorLettersLowercase extends BaseGenerator {
-    constructor() {
-        super('abcdefghijklmnopqrstuvwxyz');
+    constructor(length) {
+        super(lowercaseLine, length);
     }
 }
