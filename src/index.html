@@ -9,18 +9,11 @@
         <title>Generate passwords</title>
     </head>
     <body>
-
         <h2>PASSWORD GENERATOR</h2>
-        <span id="resultPassword"></span>
-        <label>Length: 
-            <input 
-                id="length" 
-                type="number" 
-                value="10" 
-                min="5" 
-                max="20" 
-            />
-        </label>
+        <div class="setting-item">
+            <label for="passwordLength">Длина пароля - <span id="lengthValue">20</span> символов:</label>
+            <input id="passwordLength" type="range" min="5" max="40" value="20">
+        </div>
         <label>Include Lowercase Letters (a-z)
             <input 
                 data-type="lowercase"
@@ -50,7 +43,9 @@
             />
         </label>
         <button id="generate-btn">Generate Password</button>
-
-        <script src="/src/index.js" defer></script>
+        <div class="result-container">
+            <input type="text" id="passwordResult" readonly placeholder="Ваш результат">
+        </div>
+        <script type="module" src="/src/index.js"></script>
     </body>
 </html>
