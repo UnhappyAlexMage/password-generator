@@ -1,6 +1,10 @@
 import { FactoryGenerator } from './FactoryGenerator.js';
 
 export function generatePassword(length, selectedTypes) {
+    if(!selectedTypes || selectedTypes.length === 0) {
+        throw new Error('Необходимо выбрать хотя бы один тип символов');
+    }
+
     const baseLength = Math.floor(length / selectedTypes.length);
     const remainder = length % selectedTypes.length;
 
