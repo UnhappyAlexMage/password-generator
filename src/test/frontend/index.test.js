@@ -1,30 +1,37 @@
-import { generatePassword } from "../../index.js";
+import { generatePassword } from '../../core/passwordService.js';
+import { lowercaseLine, numbersLine } from '../../core/constants.js';
 
-describe('Тестирование функции generatePassword', () => {
-
-    test('Должен возвращать строку правильной длины', () => {
-        expect(generatePassword(8)).toHaveLength(8);
-        expect(generatePassword(12)).toHaveLength(12);
-        expect(generatePassword(20)).toHaveLength(20);
-    });
-
-    test('Должен возвращать пустую строку при длине 0', () => {
-        expect(generatePassword(0)).toBe('');
-    });
-
-    test('Пароль должен содержать только разрешенные символы (латиница и цифры)', () => {
-        const password = generatePassword(50);
+describe('Тестирование passwordService (generatePassword)', () => {
+    
+    test('Должен генерировать пароль строго заданной длины', () => {
+        const length = 15;
+        const selectedTypes = ['lowercase', 'uppercase', 'numbers', 'symbols'];
         
-        const allowedRegex = /^[A-Za-z0-9]+$/;
+        const password = generatePassword(length, selectedTypes);
         
-        expect(allowedRegex.test(password)).toBe(true);
+        expect(password).toHaveLength(length);
     });
 
-    test('Функция должна возвращать разные пароли при повторных вызовах', () => {
-        const pass1 = generatePassword(12);
-        const pass2 = generatePassword(12);
+    test('Должен содержать только символы из выбранных типов (например, только строчные и цифры)', () => {
+        const length = 20;
+        const selectedTypes = ['lowercase', 'numbers'];
         
-        expect(pass1).not.toBe(pass2);
+        const password = generatePassword(length, selectedTypes);
+        
+        const allowedPool = lowercaseLine + numbersLine;
+        
+        for (const char of password) {
+            expect(allowedPool.includes(char)).toBe(true);
+        }
     });
 
+    test('Должен выбрасывать ошибку, если массив выбранных типов пуст', () => {
+        const length = 10;
+        const selectedTypes = [];
+
+        
+        expect(() => {
+            generatePassword(length, selectedTypes);
+        }).toThrow();
+    });
 });
