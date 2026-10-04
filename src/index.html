@@ -10,42 +10,44 @@
         <title>Generate passwords</title>
     </head>
     <body>
-        <h2>PASSWORD GENERATOR</h2>
-        <div class="setting-item">
-            <label for="passwordLength">Длина пароля - <span id="lengthValue">20</span> символов:</label>
-            <input id="passwordLength" type="range" min="5" max="40" value="20">
-        </div>
-        <label>Include Lowercase Letters (a-z)
-            <input 
-                data-type="lowercase"
-                type="checkbox" 
-                checked 
-            />
-        </label>
-        <label>Include Uppercase Letters (A-Z)
-            <input 
-                data-type="uppercase"
-                type="checkbox" 
-                checked 
-            />
-        </label>
-        <label>Include Numbers (0-9)
-            <input 
-                data-type="numbers"
-                type="checkbox" 
-                checked 
-            />
-        </label>
-        <label>Include Symbols (!@#$%^&*()-+)
-            <input 
-                data-type="symbols"
-                type="checkbox" 
-                checked 
-            />
-        </label>
-        <button id="generate-btn">Generate Password</button>
-        <div class="result-container">
-            <input type="text" id="passwordResult" readonly placeholder="Ваш результат">
+        <div class="generator-card">
+            <h2>PASSWORD GENERATOR</h2>
+            <div class="setting-item">
+                <label for="passwordLength">Длина пароля - <span id="lengthValue">20</span> символов:</label>
+                <input id="passwordLength" type="range" min="5" max="40" value="20">
+            </div>
+            <label>Include Lowercase Letters (a-z)
+                <input 
+                    data-type="lowercase"
+                    type="checkbox" 
+                    checked 
+                />
+            </label>
+            <label>Include Uppercase Letters (A-Z)
+                <input 
+                    data-type="uppercase"
+                    type="checkbox" 
+                    checked 
+                />
+            </label>
+            <label>Include Numbers (0-9)
+                <input 
+                    data-type="numbers"
+                    type="checkbox" 
+                    checked 
+                />
+            </label>
+            <label>Include Symbols (!@#$%^&*()-+)
+                <input 
+                    data-type="symbols"
+                    type="checkbox" 
+                    checked 
+                />
+            </label>
+            <button id="generate-btn">Generate Password</button>
+            <div class="result-container">
+                <input type="text" id="passwordResult" readonly placeholder="Ваш результат">
+            </div>
         </div>
         <script type="module" src="/src/index.js"></script>
     </body>
