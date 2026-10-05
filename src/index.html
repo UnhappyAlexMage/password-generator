@@ -7,6 +7,8 @@
             content="width=device-width, initial-scale=1.0"
         />
         <link rel="stylesheet" href="./global.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="manifest" href="./manifest.json">
         <title>Generate passwords</title>
     </head>
     <body>
@@ -52,8 +54,7 @@
                     type="text" 
                     id="passwordResult" 
                     placeholder="Ваш пароль" 
-                    readonly 
-                    onclick="if(this.value) { this.select(); navigator.clipboard.writeText(this.value); }"
+                    readonly
                 >
             </div>
         </div>
