@@ -1,0 +1,23 @@
+{
+    "short_name": "PassGenerator",
+    "name": "Генератор ваших паролей",
+    "icons": [
+        {
+            "src": "images/password-192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/password-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": ".",
+    "background_color": "#050505",
+    "theme_color": "#00ff66",
+    "display": "standalone",
+    "orientation": "portrait"
+}
