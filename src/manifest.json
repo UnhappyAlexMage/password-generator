@@ -1,6 +1,6 @@
 {
     "short_name": "PassGenerator",
-    "name": "Генератор ваших паролей",
+    "name": "MatrixPassGen",
     "icons": [
         {
             "src": "images/password-192.png",
