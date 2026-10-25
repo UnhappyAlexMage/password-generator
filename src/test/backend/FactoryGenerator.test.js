@@ -5,7 +5,6 @@ import { GeneratorLettersLowercase } from '../../core/generators/GeneratorLetter
 describe('Тестирование FactoryGenerator', () => {
     test('Должен успешно создавать генератор чисел с правильным классом', () => {
         const generator = FactoryGenerator.createGenerator('numbers', 5);
-        
         expect(generator).toBeInstanceOf(GeneratorNumbers);
         expect(generator.length).toBe(5);
     });
