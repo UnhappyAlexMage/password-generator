@@ -5,7 +5,6 @@ describe('Тестирование BaseGenerator', () => {
         const alphabet = 'ABC';
         const targetLength = 1;
         const generator = new BaseGenerator(alphabet, targetLength);
-
         const result = generator.generateLineSymbols();
 
         expect(result).toHaveLength(targetLength);
